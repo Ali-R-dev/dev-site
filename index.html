@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Raza | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ali Raza, a full stack developer in Barcelona building durable React interfaces, Node.js APIs, and considered product experiences."
+    />
+    <meta
+      name="keywords"
+      content="Ali Raza, full stack developer, React developer, Node.js developer, Barcelona, portfolio, web performance, accessibility"
+    />
+    <meta name="author" content="Ali Raza" />
+    <meta name="theme-color" content="#1e1e1e" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="https://dev.araza.me/" />
+    <!-- A showcase layout: araza.me is the version search engines should index. -->
+    <meta name="robots" content="noindex, follow" />
+
+    <meta property="og:title" content="Ali Raza | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Ali Raza builds durable web products from interface detail to backend edge."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dev.araza.me/" />
+    <meta property="og:image" content="https://dev.araza.me/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ali Raza portfolio preview" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ali Raza | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Ali Raza builds durable React interfaces, Node.js APIs, and considered product experiences."
+    />
+    <meta name="twitter:image" content="https://dev.araza.me/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ali Raza",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://araza.me/",
+        "sameAs": [
+          "https://github.com/ali-r-dev",
+          "https://www.linkedin.com/in/alirazatech/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Barcelona",
+          "addressCountry": "Spain"
+        },
+        "description": "Ali Raza builds durable web products from interface detail to backend edge."
+      }
+    </script>
+
+    <script>
+      (function () {
+        const storageKey = "theme-preference";
+        const themeMeta = {
+          "dark-plus": { colorScheme: "dark", themeColor: "#1e1e1e" },
+          "light-plus": { colorScheme: "light", themeColor: "#ffffff" },
+          "hc-black": { colorScheme: "dark", themeColor: "#000000" },
+          "one-dark-pro": { colorScheme: "dark", themeColor: "#282c34" },
+          "dracula": { colorScheme: "dark", themeColor: "#282a36" },
+          "monokai": { colorScheme: "dark", themeColor: "#272822" },
+          "github-dark": { colorScheme: "dark", themeColor: "#0d1117" },
+          "github-light": { colorScheme: "light", themeColor: "#ffffff" },
+          "solarized-dark": { colorScheme: "dark", themeColor: "#002b36" },
+          "solarized-light": { colorScheme: "light", themeColor: "#fdf6e3" },
+        };
+        const themeAliases = {
+          dark: "dark-plus",
+          light: "light-plus",
+          "high-contrast": "hc-black",
+          hc: "hc-black",
+        };
+
+        const normalizePreference = (value) => {
+          if (value === "system") return "system";
+          if (themeMeta[value]) return value;
+          if (themeAliases[value]) return themeAliases[value];
+          return "system";
+        };
+
+        let storedPreference = "system";
+        try {
+          storedPreference = normalizePreference(localStorage.getItem(storageKey));
+        } catch {}
+
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const resolvedTheme =
+          storedPreference === "system"
+            ? prefersDark
+              ? "dark-plus"
+              : "light-plus"
+            : storedPreference;
+
+        const themeInfo = themeMeta[resolvedTheme] || themeMeta["dark-plus"];
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.classList.toggle("dark", themeInfo.colorScheme === "dark");
+        document.documentElement.style.colorScheme = themeInfo.colorScheme;
+
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", themeInfo.themeColor);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DCJ6avjg.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cd-FigoA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

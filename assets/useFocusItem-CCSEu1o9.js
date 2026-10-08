@@ -1,0 +1,1 @@
+import{h as e,m as t}from"./index-DCJ6avjg.js";var n=e(t(),1);function r(e,t){(0,n.useEffect)(()=>{if(!e)return;let n=window.matchMedia?.(`(prefers-reduced-motion: reduce)`).matches;document.getElementById(`${t}-${e}`)?.scrollIntoView?.({block:`center`,behavior:n?`auto`:`smooth`})},[e,t])}export{r as t};
